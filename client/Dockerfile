@@ -1,7 +1,6 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./package.json ./
-RUN npm config set registry https://repo1.uhc.com/artifactory/api/npm/npm-virtual/ -g
 RUN npm install
 COPY . .
 RUN npm run build
