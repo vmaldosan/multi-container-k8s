@@ -15,5 +15,6 @@ spec:
       containers:
         - name: client
           image: vmaldosan/multi-client
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
